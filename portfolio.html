@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layla Anber - Web Developer</title>
+    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Theme toggle at top level -->
+    <input type="checkbox" id="theme-toggle" class="hidden-toggle">
+    
+    <div class="theme-wrapper">
+        <!-- Add these background shapes -->
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        
+        <!-- Social sidebar -->
+        <div class="social-sidebar">
+            <ul>
+                <li><a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="mailto:laila.anber8@gmail.com" title="Email"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+            <div class="sidebar-line"></div>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <input type="checkbox" id="menu-toggle" class="hidden-toggle">
+        
+        <!-- Update the navigation container structure -->
+        <header id="top-nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo">Portfolio</span>
+                </div>
+                
+                <div class="nav-right">
+                    <!-- Mobile menu button (moved before theme button) -->
+                    <label for="menu-toggle" class="mobile-menu-btn" id="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    
+                    <!-- Theme toggle button (now last) -->
+                    <label for="theme-toggle" class="theme-btn" id="theme-btn">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+                
+                <nav class="main-nav">
+                    <!-- Navigation menu remains the same -->
+                    <ul class="nav-links">
+                        <li class="active">
+                            <a href="#home">
+                                <i class="fas fa-home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <i class="fas fa-user"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#timeline">
+                                <i class="fas fa-clock"></i>
+                                <span>Journey</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills">
+                                <i class="fas fa-code"></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects">
+                                <i class="fas fa-folder"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#stats">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Stats</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#funfacts">
+                                <i class="fas fa-smile"></i>
+                                <span>Fun Facts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <section id="home" class="section-container">
+                <div class="hero-grid">
+                    <!-- Hero section headline with rotating text -->
+                    <div class="hero-content">
+                        <h1>Hi, I'm <span>Layla Anber</span></h1>
+                        <div class="animated-headline">
+                            <span class="animated-headline-static">I'm a</span>
+                            <span class="animated-headline-dynamic-wrapper">
+                                <span class="animated-headline-dynamic-text">Web Developer</span>
+                                <span class="animated-headline-dynamic-text">Computer Engineer</span>
+                                <span class="animated-headline-dynamic-text">UI Designer</span>
+                                <span class="animated-headline-dynamic-text">Problem Solver</span>
+                            </span>
+                        </div>
+                        <p>I create responsive websites with modern technologies.</p>
+                        <a href="#contact" class="btn">Contact Me</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="pics/me.jpg" alt="Profile Image">
+                        <div class="hero-tech-icons">
+                            <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                            <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                            <div class="tech-icon"><i class="fab fa-js"></i></div>
+                            <div class="tech-icon"><i class="fab fa-react"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section-container">
+                <h2 class="section-title" data-section="02. ABOUT">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="pics\5d089bed5832cd002322ba77_optimized.png" alt="About Image">
+                    </div>
+                    <div class="about-content">
+                        <p>I am a fresh graduate engineering student passionate about web development. Currently expanding my skills in modern web technologies through hands-on projects and continuous learning. My engineering background gives me a strong foundation in problem-solving and analytical thinking.</p>
+                        <p>I'm proficient in HTML, CSS, and JavaScript, and I'm actively learning React and Node.js. I'm seeking opportunities to grow as a web developer and contribute to meaningful projects.</p>
+                        <a href="#" class="btn">Download CV</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timeline" class="section-container">
+                <h2 class="section-title" data-section="03. JOURNEY">My Learning Journey</h2>
+                
+                <div class="journey-timeline">
+                    <!-- 2020 Milestone -->
+                    <div class="timeline-milestone">
+                        <div class="milestone-year">
+                            <span>2020</span>
+                            <div class="connector"></div>
+                        </div>
+                        <div class="milestone-content">
+                            <div class="milestone-card">
+                                <div class="milestone-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>First Lines of Code</h3>
+                                <p>Started learning HTML and CSS through online courses and built my first static website.</p>
+                                <div class="milestone-badges">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2021 Milestone -->
+                    <div class="timeline-milestone">
+                        <div class="milestone-year">
+                            <span>2021</span>
+                            <div class="connector"></div>
+                        </div>
+                        <div class="milestone-content">
+                            <div class="milestone-card">
+                                <div class="milestone-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h3>JavaScript Deep Dive</h3>
+                                <p>Mastered JavaScript fundamentals and started building interactive web applications.</p>
+                                <div class="milestone-badges">
+                                    <span>JavaScript</span>
+                                    <span>DOM</span>
+                                    <span>APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2022 Milestone -->
+                    <div class="timeline-milestone">
+                        <div class="milestone-year milestone-featured">
+                            <span>2022</span>
+                            <div class="connector"></div>
+                        </div>
+                        <div class="milestone-content">
+                            <div class="milestone-card">
+                                <div class="milestone-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <h3>Frontend Frameworks</h3>
+                                <p>Learned React and built several single-page applications with modern UI components.</p>
+                                <div class="milestone-badges">
+                                    <span>React</span>
+                                    <span>Redux</span>
+                                    <span>UI Libraries</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023 Milestone -->
+                    <div class="timeline-milestone">
+                        <div class="milestone-year">
+                            <span>2023</span>
+                            <div class="connector"></div>
+                        </div>
+                        <div class="milestone-content">
+                            <div class="milestone-card">
+                                <div class="milestone-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3>Full-Stack Development</h3>
+                                <p>Expanded into backend development with Node.js and database integration.</p>
+                                <div class="milestone-badges">
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                    <span>REST APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2024 Milestone -->
+                    <div class="timeline-milestone">
+                        <div class="milestone-year">
+                            <span>2024</span>
+                            <div class="connector"></div>
+                        </div>
+                        <div class="milestone-content">
+                            <div class="milestone-card active">
+                                <div class="milestone-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>Continuous Growth</h3>
+                                <p>Currently focusing on advanced CSS techniques and optimization strategies.</p>
+                                <div class="milestone-badges">
+                                    <span>Advanced CSS</span>
+                                    <span>Performance</span>
+                                    <span>Animations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section-container">
+                <h2 class="section-title" data-section="04. SKILLS">My Skills</h2>
+
+                <!-- Development Skills Row -->
+                <article class="skills-row">
+                    <div class="skills-content">
+                        <h3>Development Skills</h3>
+                        <hr class="skills-divider">
+                        <p class="skills-description">
+                            As a web developer with a strong foundation in frontend technologies, I build responsive, 
+                            interactive websites optimized for performance and user experience. I focus on clean, 
+                            maintainable code that delivers seamless interfaces across all devices.
+                        </p>
+                    </div>
+                    <div class="skills-icon-grid">
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            <p>HTML5</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            <p>CSS3</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            <p>React</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            <p>Node.js</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                            <p>MongoDB</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Design Skills Row (Reverse Layout) -->
+                <article class="skills-row skills-row-reverse">
+                    <div class="skills-icon-grid">
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            <p>Figma</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                            <p>Photoshop</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" alt="Illustrator">
+                            <p>Illustrator</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress">
+                            <p>WordPress</p>
+                        </div>
+                    </div>
+                    <div class="skills-content">
+                        <h3>Design Skills</h3>
+                        <hr class="skills-divider">
+                        <p class="skills-description">
+                            I combine creative design principles with technical implementation to craft visually 
+                            appealing interfaces. My design approach focuses on balancing aesthetics with usability, 
+                            ensuring each project not only looks great but delivers an intuitive user experience.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Tools & Other Skills Row -->
+                <article class="skills-row">
+                    <div class="skills-content">
+                        <h3>Tools & Other Skills</h3>
+                        <hr class="skills-divider">
+                        <p class="skills-description">
+                            Beyond development, I utilize various tools that enhance productivity, streamline workflows, 
+                            and optimize project management. These complementary skills help me deliver comprehensive 
+                            solutions and maintain efficient development processes.
+                        </p>
+                    </div>
+                    <div class="skills-icon-grid">
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                            <p>GitHub</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            <p>VS Code</p>
+                        </div>
+                        <div class="skill-icon-card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm">
+                            <p>npm</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Replace your current projects section with this redesign -->
+            <section id="projects" class="section-container">
+                <h2 class="section-title" data-section="05. PROJECTS">My Projects</h2>
+
+                <!-- Web Development Projects Row -->
+                <article class="project-row">
+                    <div class="project-content">
+                        <h3>Web Development</h3>
+                        <hr class="project-divider">
+                        <p class="project-description">
+                            My web development projects focus on creating responsive, interactive experiences
+                            with clean code and modern technologies. Each project demonstrates my ability to
+                            build functional, user-friendly interfaces that solve real-world problems.
+                        </p>
+                    </div>
+                    <div class="project-cards-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="E-Commerce Website">
+                                <div class="project-overlay">
+                                    <a href="#" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h4>E-Commerce Platform</h4>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Card 2 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Task Manager App">                                <div class="project-overlay">
+                                    <a href="#" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h4>Task Management App</h4>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UI/UX Design Projects Row (Reverse Layout) -->
+                <article class="project-row project-row-reverse">
+                    <div class="project-cards-grid">
+                        <!-- Project Card 3 -->
+                        <div class="project-card featured-project">
+                            <div class="featured-badge">
+                                <i class="fas fa-star"></i> Featured
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Portfolio Website">                                <div class="project-overlay">
+                                    <a href="#" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h4>Personal Portfolio</h4>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Responsive</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Card 4 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Weather Dashboard">                                <div class="project-overlay">
+                                    <a href="#" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h4>Weather Dashboard</h4>
+                                <div class="project-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                                    <a href="#" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>UI/UX Design</h3>
+                        <hr class="project-divider">
+                        <p class="project-description">
+                            My design projects showcase my ability to create visually appealing interfaces
+                            with a focus on user experience. I combine aesthetics with functionality to
+                            deliver designs that engage users and meet client objectives.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project CTA section at the bottom -->
+                <div class="project-cta">
+                    <p>Want to see more of my work?</p>
+                    <a href="https://github.com/laylaanber" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i> Visit My GitHub
+                    </a>
+                </div>
+            </section>
+
+            <section id="stats" class="section-container">
+                <h2 class="section-title" data-section="06. STATS">My Journey in Numbers</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-code"></i>
+                        <div class="stat-number" data-count="15">15</div>
+                        <p>Projects Completed</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-coffee"></i>
+                        <div class="stat-number" data-count="842">842</div>
+                        <p>Cups of Coffee</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <div class="stat-number" data-count="1200">1,200+</div>
+                        <p>Hours Coded</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-number" data-count="8">8</div>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="funfacts" class="section-container">
+                <h2 class="section-title" data-section="08. FUN FACTS">Getting Personal</h2>
+                
+                <div class="funfacts-grid">
+                    <div class="funfact-card">
+                        <div class="funfact-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Music Lover</h3>
+                        <p>I play guitar and listen to everything from jazz to electronic music while coding.</p>
+                    </div>
+                    
+                    <div class="funfact-card">
+                        <div class="funfact-icon">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                        <h3>Weekend Hiker</h3>
+                        <p>I've climbed 12 different mountain trails in the past year alone.</p>
+                    </div>
+                    
+                    <div class="funfact-card">
+                        <div class="funfact-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Bookworm</h3>
+                        <p>I read at least one non-fiction book every week to keep learning new things.</p>
+                    </div>
+
+            </section>
+
+            <section id="contact" class="section-container">
+                <h2 class="section-title" data-section="09. CONTACT">Contact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>laila.anber8@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+962 7899 2730 7</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Amman</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2025 Layla Anber. All Rights Reserved.</p>
+                <p class="footer-tagline">Designed with passion. Built with HTML & CSS.</p>
+            </footer>
+        </main>
+    </div>
+
+</body>
+</html>
