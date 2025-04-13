@@ -1,0 +1,16 @@
+/* Portfolio CSS - Main file that imports all modular CSS files */
+
+/* Import base styles (variables, resets, theme) */
+@import 'base.css';
+
+/* Import layout styles (header, navigation, footer) */
+@import 'layout.css';
+
+/* Import component styles (buttons, cards, forms) */
+@import 'components.css';
+
+/* Import section-specific styles */
+@import 'sections.css';
+
+/* Import responsive styles (media queries) */
+@import 'responsive.css';

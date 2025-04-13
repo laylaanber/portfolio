@@ -1,0 +1,332 @@
+/* =========================== */
+/* NAVIGATION - Fixed top bar  */
+/* =========================== */
+
+/* Fixed top navigation - Position fixed to stay at top while scrolling */
+#top-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: var(--nav-height) !important;
+    background-color: var(--bg-secondary) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    z-index: 1000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Navigation container - Uses Flexbox for horizontal alignment */
+.nav-container {
+    max-width: 1400px !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+/* Logo container - Flexbox for vertical alignment */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    z-index: 1001; /* Keep above everything */
+}
+
+/* Logo text styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, 
+        var(--accent) 0%, 
+        var(--accent-hover) 50%, 
+        var(--accent) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 8s ease infinite;
+    animation-delay: 1s;
+}
+
+/* Main navigation container */
+.main-nav {
+    height: 100%;
+    display: block; /* Ensure it's visible */
+}
+
+/* Navigation links list - Flexbox for horizontal layout */
+.nav-links {
+    height: 100%;
+    display: flex; /* Flexbox for horizontal menu */
+    align-items: center;
+    list-style: none;
+    gap: 1rem; /* Modern spacing between items */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+/* Navigation list items - Flexbox for vertical centering */
+.nav-links li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation link styling - Flexbox for icon and text alignment */
+.nav-links a {
+    height: 100%;
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center;
+    padding: 0 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative; /* For active indicator positioning */
+}
+
+/* Navigation link icons */
+.nav-links a i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Hover and active states for navigation links */
+.nav-links a:hover, 
+.nav-links li.active a {
+    color: var(--accent);
+}
+
+/* Active link indicator - Pseudo-element for underline */
+.nav-links li.active a::after {
+    content: '';
+    position: absolute; /* Absolute positioning for underline */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+/* Right navigation section - Flexbox for buttons layout */
+.nav-right {
+    display: flex; /* Flexbox for horizontal button layout */
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Theme toggle and mobile menu buttons */
+#theme-btn, 
+#mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    display: flex; /* Flexbox for centering content */
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover states for buttons */
+#theme-btn:hover, 
+#mobile-menu-btn:hover {
+    background-color: var(--bg-primary);
+}
+
+/* Mobile menu button - Hidden by default, shown in media queries */
+#mobile-menu-btn {
+    display: none; /* Initially hidden, shown on mobile */
+    flex-direction: column; /* Flexbox column for hamburger lines */
+    gap: 5px;
+}
+
+/* Hamburger menu lines */
+#mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-secondary);
+    transition: all 0.3s ease; /* For hamburger to X animation */
+}
+
+/* =========================== */
+/* MAIN CONTENT STRUCTURE      */
+/* =========================== */
+
+/* Main content area - Adjusted for fixed header */
+main {
+    padding-top: var(--nav-height); /* Space for fixed header */
+    width: 100%;
+}
+
+/* Section containers - Common styling for all sections */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Section titles - With decorative underline using pseudo-element */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.section-title::before {
+    content: attr(data-section);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+/* Decorative underline for section titles */
+.section-title::after {
+    content: '';
+    position: absolute; /* Absolute positioning for underline */
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.footer-tagline {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+/* Social sidebar styles */
+.social-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    z-index: 10;
+}
+
+.social-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.social-sidebar li {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.social-sidebar li:hover {
+    transform: translateY(-5px);
+}
+
+.social-sidebar a {
+    display: flex;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    color: var(--accent);
+}
+
+.sidebar-line {
+    height: 100px;
+    width: 2px;
+    background-color: var(--text-secondary);
+    margin: 20px auto 0;
+}
+
+/* Fix theme button icon display */
+#theme-toggle:checked ~ #top-nav .theme-btn .fa-moon {
+    display: none;
+}
+
+#theme-toggle:checked ~ #top-nav .theme-btn .fa-sun {
+    display: inline-block;
+}
+
+/* Show only the appropriate icon for current theme */
+.theme-btn .fa-sun {
+    display: none;
+}
+
+/* Mobile menu button styling */
+.mobile-menu-btn {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 1001;
+}
+
+/* Dark theme toggle button styling */
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: var(--bg-primary);
+}
+
+/* Fix for incorrect CSS cascade in theme toggle */
+#theme-toggle:checked + .theme-wrapper #top-nav {
+    --bg-primary: #1a1c23;
+    --bg-secondary: #242735;
+    --text-primary: #e6e6ef;
+    --text-secondary: #b0b3ca;
+    --accent: #5e63ff;
+    --accent-hover: #4a4eff;
+    --border: #42434a;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --accent-rgb: 94, 99, 255;
+    --accent-hover-rgb: 74, 78, 255;
+    background-color: var(--bg-secondary) !important;
+}

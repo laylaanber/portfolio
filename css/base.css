@@ -1,0 +1,146 @@
+/* Import Google Fonts - Poppins for clean, modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Variables for consistent theming and easy dark/light mode toggle */
+:root {
+    /* Light Theme Variables */
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --accent: #0077b6;
+    --accent-hover: #00b4d8;
+    --border: #dee2e6;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --nav-height: 70px;
+    --accent-rgb: 0, 119, 182; /* RGB values for accent color */
+    --accent-hover-rgb: 0, 180, 216; /* RGB values for accent hover */
+}
+
+/* Global Reset - Common practice to ensure consistent rendering across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML Settings - Smooth scrolling and scroll padding for fixed header */
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-padding-top: var(--nav-height); /* Prevents fixed header from covering content when scrolling to anchors */
+    font-size: 16px; /* Base font size for responsive typography */
+}
+
+/* Body Styles - Main typography and colors */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme toggle */
+    padding-top: var(--nav-height);
+}
+
+/* Dark Theme Toggle */
+body {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --accent: #0077b6;
+    --accent-hover: #00b4d8;
+    --border: #dee2e6;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --accent-rgb: 0, 119, 182;
+    --accent-hover-rgb: 0, 180, 216;
+}
+
+/* Apply dark theme when the checkbox is checked */
+#theme-toggle:checked ~ * {
+    --bg-primary: #1a1c23;
+    --bg-secondary: #242735;
+    --text-primary: #e6e6ef;
+    --text-secondary: #b0b3ca;
+    --accent: #5e63ff;
+    --accent-hover: #4a4eff;
+    --border: #42434a;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --accent-rgb: 94, 99, 255;
+    --accent-hover-rgb: 74, 78, 255;
+}
+
+/* Theme consistency fix */
+#theme-toggle:checked + .theme-wrapper,
+#theme-toggle:checked + .theme-wrapper * {
+    --bg-primary: #1a1c23;
+    --bg-secondary: #242735;
+    --text-primary: #e6e6ef;
+    --text-secondary: #b0b3ca;
+    --accent: #5e63ff;
+    --accent-hover: #4a4eff;
+    --border: #42434a;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --accent-rgb: 94, 99, 255;
+    --accent-hover-rgb: 74, 78, 255;
+}
+
+#theme-toggle:checked + .theme-wrapper #top-nav {
+    background-color: var(--bg-secondary) !important;
+}
+
+.theme-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#theme-toggle:checked + .theme-wrapper {
+    --bg-primary: #1a1c23;
+    --bg-secondary: #242735;
+    --text-primary: #e6e6ef;
+    --text-secondary: #b0b3ca;
+    --accent: #5e63ff;
+    --accent-hover: #4a4eff;
+    --border: #42434a;
+    --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --accent-rgb: 94, 99, 255;
+    --accent-hover-rgb: 74, 78, 255;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Hidden checkbox toggles for CSS-only interactivity */
+.hidden-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,265 @@
+/* =========================== */
+/* RESPONSIVE DESIGN           */
+/* =========================== */
+
+/* Large screens - 1024px and below */
+@media (max-width: 1024px) {
+    /* Adjust hero section font sizes */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    /* Reduce profile image size */
+    .hero-image img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Medium screens - 992px and below */
+@media (max-width: 992px) {
+    /* Adjust container padding */
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    /* Hide text labels in navigation, show only icons */
+    .nav-links a span {
+        display: none;
+    }
+    
+    /* Adjust icon spacing */
+    .nav-links a i {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+    
+    /* Hero grid becomes single column - Grid layout change */
+    .hero-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    /* Center hero paragraph */
+    .hero-content p {
+        margin: 0 auto 2rem;
+    }
+    
+    /* About grid becomes single column - Grid layout change */
+    .about-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+        text-align: center;
+    }
+    
+    /* Center about image */
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Center button */
+    .about-content .btn {
+        margin: 0 auto;
+    }
+    
+    /* Contact grid becomes single column - Grid layout change */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+    }
+    
+    /* Center contact form button */
+    .contact-form .btn {
+        align-self: center;
+    }
+}
+
+/* Tablets - 768px and below */
+@media (max-width: 768px) {
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: flex !important;
+    }
+    
+    /* Main navigation container */
+    .main-nav {
+        position: fixed !important;
+        top: var(--nav-height) !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        background-color: var(--bg-secondary) !important;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-200%) !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease !important;
+        z-index: 999 !important;
+    }
+    
+    /* Show menu when toggled */
+    #menu-toggle:checked ~ #top-nav .main-nav {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* Change nav links to vertical layout - Flexbox direction change */
+    .nav-links {
+        flex-direction: column; /* Switch to vertical layout */
+        width: 100%;
+        padding: 1rem 0;
+        gap: 0;
+    }
+    
+    /* Full width nav items on mobile */
+    .nav-links li {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Adjust link styling for mobile */
+    .nav-links a {
+        width: 100%;
+        padding: 1rem 2rem;
+        justify-content: flex-start;
+    }
+    
+    /* Show icons on mobile navigation */
+    .nav-links a i {
+        margin-right: 0.75rem;
+    }
+    
+    /* Show text on mobile navigation */
+    .nav-links a span {
+        display: inline;
+    }
+    
+    /* Remove underline indicator on mobile */
+    .nav-links li.active a::after {
+        display: none;
+    }
+    
+    /* Active nav link on mobile */
+    .nav-links li.active a {
+        background-color: var(--bg-primary);
+    }
+    
+    /* Adjust section title size */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Reduce hero heading size */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Reduce hero subheading size */
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Further reduce profile image size */
+    .hero-image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    /* Adjust hero section spacing for better mobile view */
+    .hero-grid {
+        min-height: auto;
+        padding: 2rem 0 3rem;
+    }
+    
+    /* Stack the hero content and image with proper spacing */
+    .hero-grid .hero-image {
+        margin-top: 2rem;
+    }
+
+    /* Hide social sidebar on mobile */
+    .social-sidebar {
+        display: none;
+    }
+    
+    /* Projects responsive layout */
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
+    .project-image img {
+        height: 180px;
+    }
+}
+
+/* Mobile - 576px and below */
+@media (max-width: 576px) {
+    /* Adjust section padding */
+    .section-container {
+        padding: 3rem 1.5rem;
+    }
+    
+    /* Reduce hero heading size further */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    /* Reduce paragraph size */
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    /* Smallest profile image size */
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Projects grid becomes single column - Grid layout change */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+    }
+    
+    /* Skills grid becomes single column - Grid layout change */
+    .skills-grid {
+        grid-template-columns: 1fr; /* Switch to single column */
+    }
+
+    /* Enhance touch targets for mobile */
+    .nav-links a {
+        padding: 1.25rem 1.5rem;
+    }
+    
+    .nav-links a i {
+        font-size: 1.5rem;
+    }
+    
+    /* Project images on mobile */
+    .project-image img {
+        height: 200px;
+    }
+}
+
+/* Fix mobile menu toggle */
+#menu-toggle:checked ~ header .main-nav,
+#menu-toggle:checked ~ #top-nav .main-nav {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Fix for active menu items display on mobile */
+@media (max-width: 768px) {
+    .nav-links li.active a {
+        background-color: var(--accent);
+        color: white;
+    }
+    
+    /* Stagger the animation for each nav link */
+    #menu-toggle:checked ~ #top-nav .nav-links li:nth-child(1) { transition-delay: 0.1s; }
+    #menu-toggle:checked ~ #top-nav .nav-links li:nth-child(2) { transition-delay: 0.2s; }
+    #menu-toggle:checked ~ #top-nav .nav-links li:nth-child(3) { transition-delay: 0.3s; }
+    #menu-toggle:checked ~ #top-nav .nav-links li:nth-child(4) { transition-delay: 0.4s; }
+    #menu-toggle:checked ~ #top-nav .nav-links li:nth-child(5) { transition-delay: 0.5s; }
+}
