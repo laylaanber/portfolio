@@ -14,3 +14,6 @@
 
 /* Import responsive styles (media queries) */
 @import 'responsive.css';
+
+/* Import animations */
+@import 'animations.css';

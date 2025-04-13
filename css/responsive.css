@@ -191,6 +191,16 @@
     .project-image img {
         height: 180px;
     }
+
+    /* Mobile adjustments */
+    .nav-right {
+        gap: 0.5rem; /* Smaller gap on mobile */
+    }
+    
+    /* Ensure the theme button remains visible */
+    .theme-btn {
+        margin-left: 0.5rem; /* Add a little spacing */
+    }
 }
 
 /* Mobile - 576px and below */
