@@ -760,58 +760,6 @@
     resize: vertical; /* Allow vertical resizing only */
 }
 
-/* =========================== */
-/* TESTIMONIALS SECTION        */
-/* =========================== */
-
-.testimonials-slider {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-/* Base styling for testimonial cards */
-.testimonial-card {
-    background-color: var(--bg-secondary);
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: var(--card-shadow);
-    display: none; /* Hidden by default */
-    animation: fadeIn 0.5s ease forwards;
-    width: 100%;
-}
-
-.testimonial-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    gap: 0.5rem;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--border);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Show the selected testimonial based on radio button selection */
-#testimonial-1:checked ~ .testimonials-slider #slide-1,
-#testimonial-2:checked ~ .testimonials-slider #slide-2,
-#testimonial-3:checked ~ .testimonials-slider #slide-3 {
-    display: block;
-}
-
-/* Active dot indicators */
-#testimonial-1:checked ~ .testimonial-dots label:nth-child(1),
-#testimonial-2:checked ~ .testimonial-dots label:nth-child(2),
-#testimonial-3:checked ~ .testimonial-dots label:nth-child(3) {
-    background-color: var(--accent);
-    transform: scale(1.2);
-}
 
 /* =========================== */
 /* STATS COUNTER SECTION       */
